@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OakLand 202201947</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="barraNavegacion">
+        <button id="btnEjecutar">Ejecutar</button>
+        <div class="btnDesplegable">
+            <button class="dropbtn">Archivo</button>
+            <div class="contenidoDesplegable">
+                <a href="#" id="nuevoArchivo">Nuevo Archivo</a>
+                <a href="#" id="abrirArchivo">Abrir Archivo</a>
+                <a href="#" id="guardarArchivo">Guardar Archivo /  Guardar como</a>
+                <a href="#" id="descargarArchivo">Descargar Archivo de Salida</a>
+            </div>
+        </div>
+        <div class="btnDesplegable">
+            <button class="dropbtn">Reportes</button>
+            <div class="contenidoDesplegable">
+                <a href="#" id="tablaErrores">Reporte Errores</a>
+                <a href="#" id="tablaSimbolos">Reporte Tabla de Símbolos</a>
+            </div>
+        </div>
+    </div>
+
+    <input type="file" id="fileInput" style="display: none;" accept=".oak"> 
+
+    <div class="container">
+        <div class="textEntrada">
+            <h2>Entrada</h2>
+            <div class="code-container">
+                <div class="line-numbers" id="nlEntrada"></div>
+                <textarea id="txtEntrada" placeholder="Escribe aquí..."></textarea>
+            </div>
+        </div>
+
+        <div class="textSalida">
+            <h2>Consola</h2>
+            <div class="code-container">
+                <div class="line-numbers" id="nlSalida"></div>
+                <textarea id="txtSalida" readonly></textarea>
+            </div>
+        </div>
+    </div>
+        <script type="module" src="../backend/Analizador.js"></script>
+        <script type="module" src="../backend/Interprete.js"></script>
+        <script type="module" src="../backend/Compilador.js"></script>
+        <script type="module" src="./ManejadorArchivos.js"></script>
+        <script type="module" src="./index.js"></script>
+</body>
+</html>
