@@ -1314,8 +1314,8 @@ export class CompilerVisitor extends BaseVisitor {
         node.index.accept(this);
 
         const datoObjeto = this.code.popObject(r.T0)
-        // const indexObject = this.code.popObject(r.T1)
-        // const [offset, variableO] = this.code.getObject(node.id)
+        const indexObject = this.code.popObject(r.T1)
+        const [offset, variableO] = this.code.getObject(node.id)
 
         this.code.la(r.T5, node.id)
 
